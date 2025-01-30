@@ -1,0 +1,274 @@
+{
+    "categories": [
+      { "id": 1, "name": "Action" },
+      { "id": 2, "name": "Drama" },
+      { "id": 3, "name": "Comedy" },
+      { "id": 4, "name": "Horror" },
+      { "id": 5, "name": "Sci-Fi" },
+      { "id": 6, "name": "Adventure" },
+      { "id": 7, "name": "Thriller" },
+      { "id": 8, "name": "Animation" },
+      { "id": 9, "name": "Fantasy" },
+      { "id": 10, "name": "Documentary" },
+      { "id": 11, "name": "Mystery" },
+      { "id": 12, "name": "Romance" }
+    ],
+    "movies": [
+      {
+        "id": 1,
+        "title": "Inception",
+        "categoryId": 5,
+        "year": 2010,
+        "director": "Christopher Nolan",
+        "duration": 148,
+        "rating": 8.8,
+        "platforms": [1, 2],
+        "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"]
+      },
+      {
+        "id": 2,
+        "title": "The Dark Knight",
+        "categoryId": 1,
+        "year": 2008,
+        "director": "Christopher Nolan",
+        "duration": 152,
+        "rating": 9.0,
+        "platforms": [2, 3],
+        "actors": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"]
+      },
+      {
+        "id": 3,
+        "title": "Parasite",
+        "categoryId": 2,
+        "year": 2019,
+        "director": "Bong Joon-ho",
+        "duration": 132,
+        "rating": 8.6,
+        "platforms": [1, 3, 4],
+        "actors": ["Song Kang-ho", "Lee Sun-kyun", "Cho Yeo-jeong"]
+      },
+      {
+        "id": 4,
+        "title": "Toy Story 4",
+        "categoryId": 8,
+        "year": 2019,
+        "director": "Josh Cooley",
+        "duration": 100,
+        "rating": 7.8,
+        "platforms": [4, 5],
+        "actors": ["Tom Hanks", "Tim Allen", "Annie Potts"]
+      },
+      {
+        "id": 5,
+        "title": "A Quiet Place",
+        "categoryId": 4,
+        "year": 2018,
+        "director": "John Krasinski",
+        "duration": 90,
+        "rating": 7.5,
+        "platforms": [3, 5],
+        "actors": ["Emily Blunt", "John Krasinski", "Millicent Simmonds"]
+      },
+      {
+        "id": 6,
+        "title": "Interstellar",
+        "categoryId": 5,
+        "year": 2014,
+        "director": "Christopher Nolan",
+        "duration": 169,
+        "rating": 8.6,
+        "platforms": [1, 3],
+        "actors": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"]
+      },
+      {
+        "id": 7,
+        "title": "The Matrix",
+        "categoryId": 5,
+        "year": 1999,
+        "director": "Lana Wachowski, Lilly Wachowski",
+        "duration": 136,
+        "rating": 8.7,
+        "platforms": [2, 4],
+        "actors": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"]
+      },
+      {
+        "id": 8,
+        "title": "Avengers: Endgame",
+        "categoryId": 1,
+        "year": 2019,
+        "director": "Anthony Russo, Joe Russo",
+        "duration": 181,
+        "rating": 8.4,
+        "platforms": [1, 4],
+        "actors": ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson"]
+      },
+      {
+        "id": 9,
+        "title": "The Lion King",
+        "categoryId": 8,
+        "year": 1994,
+        "director": "Roger Allers, Rob Minkoff",
+        "duration": 88,
+        "rating": 8.5,
+        "platforms": [4, 5],
+        "actors": ["Matthew Broderick", "Jeremy Irons", "James Earl Jones"]
+      },
+      {
+        "id": 10,
+        "title": "Titanic",
+        "categoryId": 12,
+        "year": 1997,
+        "director": "James Cameron",
+        "duration": 195,
+        "rating": 7.8,
+        "platforms": [1, 3, 5],
+        "actors": ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane"]
+      },
+      {
+        "id": 11,
+        "title": "Joker",
+        "categoryId": 7,
+        "year": 2019,
+        "director": "Todd Phillips",
+        "duration": 122,
+        "rating": 8.4,
+        "platforms": [2, 3],
+        "actors": ["Joaquin Phoenix", "Robert De Niro", "Zazie Beetz"]
+      },
+      {
+        "id": 12,
+        "title": "The Grand Budapest Hotel",
+        "categoryId": 3,
+        "year": 2014,
+        "director": "Wes Anderson",
+        "duration": 99,
+        "rating": 8.1,
+        "platforms": [3, 4],
+        "actors": ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"]
+      },
+      [
+        {
+          "id": 13,
+          "title": "Blade Runner 2049",
+          "categoryId": 5,
+          "year": 2017,
+          "director": "Denis Villeneuve",
+          "duration": 164,
+          "rating": 8.0,
+          "platforms": [1, 3],
+          "actors": ["Ryan Gosling", "Harrison Ford", "Ana de Armas"]
+        },
+        {
+          "id": 14,
+          "title": "Whiplash",
+          "categoryId": 2,
+          "year": 2014,
+          "director": "Damien Chazelle",
+          "duration": 107,
+          "rating": 8.5,
+          "platforms": [2, 3],
+          "actors": ["Miles Teller", "J.K. Simmons", "Paul Reiser"]
+        },
+        {
+          "id": 15,
+          "title": "The Wolf of Wall Street",
+          "categoryId": 2,
+          "year": 2013,
+          "director": "Martin Scorsese",
+          "duration": 180,
+          "rating": 8.2,
+          "platforms": [1, 5],
+          "actors": ["Leonardo DiCaprio", "Jonah Hill", "Margot Robbie"]
+        },
+        {
+          "id": 16,
+          "title": "Get Out",
+          "categoryId": 7,
+          "year": 2017,
+          "director": "Jordan Peele",
+          "duration": 104,
+          "rating": 7.7,
+          "platforms": [2, 4],
+          "actors": ["Daniel Kaluuya", "Allison Williams", "Bradley Whitford"]
+        },
+        {
+          "id": 17,
+          "title": "Coco",
+          "categoryId": 8,
+          "year": 2017,
+          "director": "Lee Unkrich, Adrian Molina",
+          "duration": 105,
+          "rating": 8.4,
+          "platforms": [4, 5],
+          "actors": ["Anthony Gonzalez", "Gael García Bernal", "Benjamin Bratt"]
+        },
+        {
+          "id": 18,
+          "title": "The Revenant",
+          "categoryId": 6,
+          "year": 2015,
+          "director": "Alejandro G. Iñárritu",
+          "duration": 156,
+          "rating": 8.0,
+          "platforms": [3, 5],
+          "actors": ["Leonardo DiCaprio", "Tom Hardy", "Domhnall Gleeson"]
+        },
+        {
+          "id": 19,
+          "title": "Shutter Island",
+          "categoryId": 11,
+          "year": 2010,
+          "director": "Martin Scorsese",
+          "duration": 138,
+          "rating": 8.2,
+          "platforms": [1, 2],
+          "actors": ["Leonardo DiCaprio", "Mark Ruffalo", "Ben Kingsley"]
+        },
+        {
+          "id": 20,
+          "title": "The Social Network",
+          "categoryId": 10,
+          "year": 2010,
+          "director": "David Fincher",
+          "duration": 120,
+          "rating": 7.7,
+          "platforms": [1, 3],
+          "actors": ["Jesse Eisenberg", "Andrew Garfield", "Justin Timberlake"]
+        },
+        {
+          "id": 21,
+          "title": "Mad Max: Fury Road",
+          "categoryId": 1,
+          "year": 2015,
+          "director": "George Miller",
+          "duration": 120,
+          "rating": 8.1,
+          "platforms": [2, 4],
+          "actors": ["Tom Hardy", "Charlize Theron", "Nicholas Hoult"]
+        },
+        {
+          "id": 22,
+          "title": "Pulp Fiction",
+          "categoryId": 7,
+          "year": 1994,
+          "director": "Quentin Tarantino",
+          "duration": 154,
+          "rating": 8.9,
+          "platforms": [3, 5],
+          "actors": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"]
+        }
+      ]      
+    ],
+    "platforms": [
+      { "id": 1, "name": "Netflix" },
+      { "id": 2, "name": "HBO Max" },
+      { "id": 3, "name": "Amazon Prime Video" },
+      { "id": 4, "name": "Disney+" },
+      { "id": 5, "name": "Apple TV+" },
+      { "id": 6, "name": "Hulu" },
+      { "id": 7, "name": "Peacock" },
+      { "id": 8, "name": "Paramount+" },
+      { "id": 9, "name": "YouTube Movies" }
+    ]
+  }
+  
