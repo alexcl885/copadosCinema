@@ -1,5 +1,7 @@
-# Proyecto CopadosCinema
+# CopadosCinema Project
 
-Esto es un proyecto realizado en el modulo de 2ºDAM, en el cual voy a plantear una aplicacion web mediante `React` + `Vite` una pagina web de mi cine.
+This is a project created in the 2nd year of the DAM module, where I am developing a web application using `React` + `Vite` to create a website for my cinema.
 
+In this proyect i will learn how to create components also to know how to see create state in components.
 
+---
