@@ -1,6 +1,6 @@
 /*I have to say that this css its realized with IA */
 
-.list-films {
+.list-movies {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -9,7 +9,7 @@
     background-color: #f8f9fa;
   }
   
-  .list-films__item {
+  .list-movies__item {
     list-style: none;
     background: white;
     padding: 15px;
@@ -19,13 +19,13 @@
     text-align: center;
   }
   
-  .list-films__item p {
+  .list-movies__item p {
     margin: 5px 0;
     font-size: 14px;
     color: #333;
   }
   
-  .list-films__image {
+  .list-movies__image {
     width: 100%;
     height: auto;
     border-radius: 8px;

@@ -8,10 +8,11 @@ const Header = () => {
             </div>
             <nav className="nav-menu">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Películas</a></li>
-                    <li><a href="#">Categorías</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Platform</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
         </header>

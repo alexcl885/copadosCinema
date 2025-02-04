@@ -1,0 +1,50 @@
+/* Contenedor principal del buscador */
+.search-movie-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+/* Estilo para el label */
+.search-movie-label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Estilo para el input de texto */
+.search-movie-input {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.search-movie-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Estilo para el botón */
+.search-movie-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-movie-btn:hover {
+    background-color: #0056b3;
+}
