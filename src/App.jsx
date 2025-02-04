@@ -25,6 +25,17 @@ function App() {
     }
   }
 
+
+  const deleteTeam = async (id) => {
+    const response = await fetch(`http://localhost:3000/movies/${id}`, {
+      method: 'DELETE'
+    })
+    if (response.status === 200) {
+      downloadMovies();
+    }
+    return response.status === 200;
+  }
+
   const searchOneMovie = async (movie) => {
     const response = await fetch('http://localhost:3000/movies');
     const apiMovies = await response.json();
@@ -56,7 +67,7 @@ function App() {
     <>
       <Header/>
       <SearchMovie searchMovies={searchMovies}/><CheckBoxMain/>
-      <ListFilms movies={movies} />
+      <ListFilms movies={movies} deleteTeam={deleteTeam}/>
       <Footer/>
     </>
   );
