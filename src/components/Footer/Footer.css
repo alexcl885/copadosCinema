@@ -1,47 +1,71 @@
-.cinema-footer {
-    background-color: #1c1c1c;
+/* 🎬 Estilo futurista para Footer */
+.footer-cinema {
+    background: linear-gradient(90deg, #0f0f0f, #1a1a2e);
     color: white;
     padding: 20px;
     text-align: center;
     position: relative;
     bottom: 0;
     width: 100%;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 10px rgba(0, 255, 255, 0.3);
+    border-top: 2px solid rgba(0, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
 }
 
+/* 🎥 Contenedor del Footer */
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* 📜 Texto con efecto sutil */
+.footer-content p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px cyan;
+    opacity: 0.9;
+}
+
+/* 🚀 Menú de navegación en el footer */
 .footer-nav ul {
     list-style: none;
     padding: 0;
     margin-top: 10px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
-.footer-nav li {
-    display: inline;
-}
-
+/* 🌟 Enlaces con efecto neón */
 .footer-nav a {
     text-decoration: none;
-    color: white;
+    color: #0ff;
     font-size: 16px;
-    transition: color 0.3s ease;
+    font-weight: bold;
+    text-shadow: 0 0 5px cyan, 0 0 10px blue;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .footer-nav a:hover {
-    color: #f39c12;
+    color: #ff0;
+    text-shadow: 0 0 10px yellow, 0 0 20px orange;
 }
 
-/* Responsive para pantallas pequeñas */
+/* 🌌 Animación de brillo sutil */
+@keyframes footer-glow {
+    0% { box-shadow: 0 -4px 10px rgba(0, 255, 255, 0.3); }
+    50% { box-shadow: 0 -4px 20px rgba(0, 255, 255, 0.6); }
+    100% { box-shadow: 0 -4px 10px rgba(0, 255, 255, 0.3); }
+}
+
+.footer-cinema:hover {
+    animation: footer-glow 1.5s infinite alternate;
+}
+
+/* 📱 Responsivo para pantallas pequeñas */
 @media screen and (max-width: 768px) {
     .footer-nav ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
 }

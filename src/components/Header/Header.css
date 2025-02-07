@@ -1,46 +1,74 @@
-.cinema-header {
+/* 🎬 Estilo futurista para Header */
+.header-cinema {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    background-color: #1c1c1c;
+    background: linear-gradient(90deg, #0f0f0f, #1a1a2e);
     color: white;
-    padding: 15px 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
+    padding: 15px 40px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    border-bottom: 2px solid rgba(0, 255, 255, 0.5);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
 }
 
-.logo {
-    font-size: 24px;
+/* 🎥 Logo con animación */
+.header-logo {
+    font-size: 26px;
     font-weight: bold;
     display: flex;
     align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px cyan, 0 0 20px blue;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
-.nav-menu ul {
+.header-logo:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 15px cyan, 0 0 25px blue;
+}
+
+/* 🚀 Menú de navegación futurista */
+.header-nav-menu ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }
 
-
-.nav-menu li {
+.header-nav-menu li {
     display: inline;
 }
 
-.nav-menu a {
+/* ✨ Enlaces con efecto neón */
+.header-nav-menu a {
     text-decoration: none;
-    color: white;
+    color: #0ff;
     font-size: 18px;
-    transition: color 0.3s ease;
+    font-weight: bold;
+    text-shadow: 0 0 5px cyan, 0 0 10px blue;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.nav-menu a:hover {
-    color: #f39c12;
+.header-nav-menu a:hover {
+    color: #ff0;
+    text-shadow: 0 0 10px yellow, 0 0 20px orange;
 }
 
+/* 🌀 Efecto animado al hacer scroll */
+@keyframes header-glow {
+    0% { box-shadow: 0 0 15px rgba(0, 255, 255, 0.4); }
+    50% { box-shadow: 0 0 30px rgba(0, 255, 255, 0.7); }
+    100% { box-shadow: 0 0 15px rgba(0, 255, 255, 0.4); }
+}
 
+.header-cinema:hover {
+    animation: header-glow 1.5s infinite alternate;
+}

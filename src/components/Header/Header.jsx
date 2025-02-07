@@ -2,11 +2,11 @@ import "./Header.css";
 
 const Header = () => {
     return (
-        <header className="cinema-header">
-            <div className="logo">
+        <header className="header-cinema">
+            <div className="header-logo">
                 🎬 CopadosCinema
             </div>
-            <nav className="nav-menu">
+            <nav className="header-nav-menu">
                 <ul>
                     <li><a href="http://localhost:5173/">Inicio</a></li>
                     <li><a href="#">Películas</a></li>

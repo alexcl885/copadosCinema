@@ -26,7 +26,7 @@ function App() {
   }
 
 
-  const deleteTeam = async (id) => {
+  const deleteMovie = async (id) => {
     const response = await fetch(`http://localhost:3000/movies/${id}`, {
       method: 'DELETE'
     })
@@ -65,9 +65,9 @@ function App() {
 
   return (
     <>
-      <Header/>
+      <Header/><br/><br/><br/><br/>
       <SearchMovie searchMovies={searchMovies}/><CheckBoxMain/>
-      <ListFilms movies={movies} deleteTeam={deleteTeam}/>
+      <ListFilms movies={movies} deleteMovie={deleteMovie}/>
       <Footer/>
     </>
   );
