@@ -7,16 +7,17 @@ const ListFilms = ({ movies, deleteMovie }) => {
   const [movieSelect, setMovieSelect] = useState("");
 
   const detailMovie = (id) => {
-    let movie = movies.find(movie => movie.id == id);
-    if (movieSelect.id == movie.id) {
-      setMovieSelect(""); 
+    let movie = movies.find(movie => movie.id === id);
+    if (movieSelect && movieSelect.id === movie.id) {
+      setMovieSelect("");
     } else {
       setMovieSelect(movie);
     }
   };
+
   const onClose = () => {
     setMovieSelect(""); 
-  }
+  };
 
   return (
     <>
@@ -24,19 +25,20 @@ const ListFilms = ({ movies, deleteMovie }) => {
         {movies.map((movie) => (
           <div key={movie.id} className="list-movies__item">
             <li><strong>Title: </strong>{movie.title}</li>
-            <p><strong>Year: </strong>{movie.year}</p>
-            <p><strong>Director: </strong>{movie.director}</p>
-            <p><strong>Duration: </strong>{movie.duration} min</p>
-            <p><strong>Rating: </strong>{movie.rating}</p>
-            <img src={movie.image} alt={`Poster of ${movie.title}`} className="list-movies__image" />
+            <p><strong>Release Date: </strong>{movie.release_date}</p>
+            <p><strong>Rating: </strong>{movie.vote_average}</p>
+            <img 
+              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
+              alt={`Poster of ${movie.title}`} 
+              className="list-movies__image" 
+            />
             <div style={{ display: "flex", gap: "10px" }}>
-              <input type="button" value="View Movie" className="list-movies__button" onClick={() => detailMovie(movie.id)} />
+              <input type="button" value="View Movie" onClick={() => detailMovie(movie.id)} className="list-movies__button" />
               <input className="list-movies__button--danger" type="button" value="Delete" onClick={() => deleteMovie(movie.id)} />
             </div>
           </div>
         ))}
       </div>
-
       {movieSelect && <DetailMovie movie={movieSelect} onClose={onClose} />}
     </>
   );

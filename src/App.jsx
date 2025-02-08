@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+import './App.css'
 import ListFilms from './components/ListMovies/ListMovies';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -37,15 +37,11 @@ function App() {
   }
 
   const searchOneMovie = async (movie) => {
-    const response = await fetch('http://localhost:3000/movies');
-    const apiMovies = await response.json();
-
-    const filteredMovies = apiMovies.filter(mov => 
-      mov.title.toLowerCase() === movie.toLowerCase()
-    );
-    setMovies(filteredMovies);
-    
-  }
+    const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=d4aee571c84637243d4d7e749415d1e2&query=${movie}`);
+    const data = await response.json();
+    setMovies(data.results);  
+  };
+  
 /**
  * --------------------------------------
  */
@@ -54,10 +50,11 @@ function App() {
    * there are in my own API
    */
   const downloadMovies = async () => {
-    const response = await fetch('http://localhost:3000/movies');
-    const apiMovies = await response.json();
-    setMovies(apiMovies);
-  }
+    const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=d4aee571c84637243d4d7e749415d1e2');
+    const data = await response.json();
+    setMovies(data.results);  // Accede a los resultados correctamente
+  };
+  
 
   useEffect(() => {
     searchMovies();
