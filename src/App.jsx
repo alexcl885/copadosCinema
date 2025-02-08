@@ -25,9 +25,12 @@ function App() {
     }
   }
 
-
+  /**
+   * This function should delete a movie but how i ve got a movie API 
+   * i cant delete because i havent permision of this.
+   */
   const deleteMovie = async (id) => {
-    const response = await fetch(`http://localhost:3000/movies/${id}`, {
+    const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=TU_API_KEY`, {
       method: 'DELETE'
     })
     if (response.status === 200) {
@@ -52,7 +55,7 @@ function App() {
   const downloadMovies = async () => {
     const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=d4aee571c84637243d4d7e749415d1e2');
     const data = await response.json();
-    setMovies(data.results);  // Accede a los resultados correctamente
+    setMovies(data.results);  
   };
   
 
@@ -63,7 +66,8 @@ function App() {
   return (
     <>
       <Header/><br/><br/><br/><br/>
-      <SearchMovie searchMovies={searchMovies}/><CheckBoxMain/>
+      <SearchMovie searchMovies={searchMovies}/>
+      <CheckBoxMain/>
       <ListFilms movies={movies} deleteMovie={deleteMovie}/>
       <Footer/>
     </>

@@ -2,20 +2,16 @@ import { useState } from "react";
 import CategoryCheckBox from "./CategoryCheckBox/CategoryCheckBox";
 
 const CheckBoxMain = () => {
-    /**
-     * This const is a state to show a category checkboxes
-     */
-    const [showFilterCategory, setFilterCategory] = useState(false)
-    const changeFilterCategory = () => {
-        setFilterCategory(!showFilterCategory)
-    }
+    const [showFilterCategory, setShowFilterCategory] = useState(false);
+
     return (
         <>
-            <input type="button" value="Filter Category" onClick={changeFilterCategory}/>
-            <input type="button" value="Filter Platform" />
-            {showFilterCategory && <CategoryCheckBox></CategoryCheckBox>}
+            <input type="button" value="Filtrar por Categoría" onClick={() => setShowFilterCategory(!showFilterCategory)} />
+            <input type="button" value="Filtrar por Plataforma" />
+
+            {showFilterCategory && <CategoryCheckBox />}
         </>
-    )
-}
+    );
+};
 
 export default CheckBoxMain;
