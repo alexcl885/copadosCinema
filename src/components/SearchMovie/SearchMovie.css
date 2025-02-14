@@ -1,50 +1,72 @@
-/* Contenedor principal del buscador */
+/* Contenedor principal con estilo futurista */
 .search-movie-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.2);
     max-width: 600px;
-    margin: 0 auto; /* Centra el contenedor en la página */
+    margin: 20px auto;
+    border: 1px solid rgba(0, 255, 255, 0.3);
 }
 
 /* Estilo para el label */
 .search-movie-label {
     font-size: 1rem;
-    color: #333;
-    font-weight: 500;
+    font-weight: bold;
+    color: #00d4ff;
+    text-shadow: 0px 0px 8px rgba(0, 255, 255, 0.8);
 }
 
-/* Estilo para el input de texto */
+/* Input de texto con efecto neón */
 .search-movie-input {
     flex: 1;
-    padding: 0.5rem 0.75rem;
+    padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: border-color 0.3s ease;
+    border: 2px solid rgba(0, 255, 255, 0.6);
+    border-radius: 8px;
+    background-color: #0f3460;
+    color: #00d4ff;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.3);
 }
+
+.search-movie-input::placeholder {
+    color: rgba(0, 255, 255, 0.5);
+}
+
 
 .search-movie-input:focus {
-    outline: none;
-    border-color: #007bff;
+    border-color: #00fff5;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.7);
 }
 
-/* Estilo para el botón */
+
 .search-movie-btn {
-    padding: 0.5rem 1rem;
+    padding: 10px 15px;
     font-size: 1rem;
-    background-color: #007bff;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #00d4ff, #007bff);
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
 }
 
 .search-movie-btn:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #00fff5, #0056b3);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.8);
+}
+
+.search-movie-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 1);
 }

@@ -1,0 +1,82 @@
+/* Contenedor principal */
+.category-checkbox-container {
+    background: rgba(15, 15, 15, 0.9);
+    border-radius: 12px;
+    padding: 1rem;
+    max-width: 90%;
+    margin: 1rem auto;
+    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.3);
+    text-align: center;
+    color: #fff;
+    font-family: "Arial", sans-serif;
+    overflow-x: auto; /* Permite scroll horizontal si hay muchas categorías */
+}
+
+/* Estilo para el título */
+.category-checkbox-container h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: cyan;
+    text-transform: uppercase;
+}
+
+/* Contenedor para alinear los checkboxes en fila */
+.category-checkbox-list {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten sin romper el diseño */
+    overflow-x: auto;
+    padding: 5px;
+}
+
+/* Diseño de cada categoría tipo "chip" */
+.category-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: rgba(0, 255, 255, 0.15);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* Hover en cada categoría */
+.category-checkbox-item:hover {
+    background: rgba(0, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Checkbox invisible pero funcional */
+.category-checkbox-item input[type="checkbox"] {
+    display: none;
+}
+
+/* Estilo cuando el checkbox está seleccionado */
+.category-checkbox-item input[type="checkbox"]:checked + label {
+    background: cyan;
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 6px 12px;
+}
+
+/* Estilo para el texto del label */
+.category-checkbox-item label {
+    font-size: 0.9rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+/* Mensaje de carga */
+.loading-message {
+    color: gray;
+    font-style: italic;
+}

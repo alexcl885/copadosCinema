@@ -1,8 +1,7 @@
+import { useState, useEffect } from 'react';
 import './SearchMovie.css';
 
-const SearchMovie = ({searchMovies}) => {
-
-
+const SearchMovie = ({ searchMovies, setSearchTerm, searchTerm }) => {
     return (
         <div className="search-movie-container">
             <label className="search-movie-label">Search a movie: </label>
@@ -12,6 +11,8 @@ const SearchMovie = ({searchMovies}) => {
                 id='textMovie'
                 className="search-movie-input" 
                 placeholder="name of movie..." 
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
             />
             <input 
                 type="button" 
@@ -20,7 +21,7 @@ const SearchMovie = ({searchMovies}) => {
                 onClick={searchMovies}
             />
         </div>
-    )
-}
+    );
+};
 
 export default SearchMovie;
