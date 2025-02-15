@@ -54,26 +54,36 @@ function App() {
    * @param {*} genreId 
    */
   const searchByGenre = async (genreId) => {
-    
-    const response = await fetch('http://localhost:3000/genres');
-    const apiMovies = await response.json();
-  
-    const filteredMovies = apiMovies.filter(mov => {
-      console.log("Object",mov);
-      
-      return (
-        <>
-          {mov.genre_ids.includes(genreId)}
-          
-          
-        </>
-      )}
-    );
-    console.log(filteredMovies);
-    
-  
-    setMovies(filteredMovies);
+    try {
+        const response = await fetch('http://localhost:3000/movies'); 
+        const apiMovies = await response.json();
+
+        // here i filter the movies that includes the genreId in genre_ids array
+        const filteredMovies = apiMovies.filter(movie => movie.genre_ids.includes(parseInt(genreId)));
+
+        console.log(filteredMovies);
+
+        setMovies(filteredMovies);
+    } catch (error) {
+        console.error("Error fetching movies:", error);
+    }
   };
+
+  const searchByCategory = async (categId) => {
+    try {
+        const response = await fetch("http://localhost:3000/movies"); 
+        if (!response.ok) {
+            throw new Error("Error al obtener los datos");
+        }
+        const data = await response.json();
+        
+        const filteredMovies = data.movies.filter(movie => movie.genre_ids.includes(parseInt(categId)));
+        return filteredMovies;
+    } catch (error) {
+        console.error("Error fetching movies:", error);
+    }
+  };
+
   
 
   useEffect(() => {
@@ -87,7 +97,7 @@ function App() {
     <>
       <Header /><br /><br /><br /><br />
       <SearchMovie searchMovies={searchOneMovie} setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
-      <CheckBoxMain searchByGenre={searchByGenre} />
+      <CheckBoxMain searchByGenre={searchByGenre} searchByCategory={searchByCategory} />
       <ListMovies movies={movies} deleteMovie={deleteMovie} />
       <Footer />
     </>

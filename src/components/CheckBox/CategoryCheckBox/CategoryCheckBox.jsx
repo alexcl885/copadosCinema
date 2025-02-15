@@ -11,7 +11,7 @@ const CategoryCheckBox = ({ searchByGenre }) => {
         try {
             const response = await fetch(`http://localhost:3000/genres`);
             const data = await response.json();
-            setCategories(data);
+            setCategories(data); 
         } catch (error) {
             console.error("Error to get the categories:", error);
         }
@@ -31,12 +31,9 @@ const CategoryCheckBox = ({ searchByGenre }) => {
                             type="checkbox"
                             id={category.id}
                             name={category.name}
-                            onClick={() => searchByGenre(category.id)}
-                            
+                            onChange={() => searchByGenre(category.id)} // Cambio de onClick a onChange
                         />
-                        <label>{category.name}</label>
-                        
-                        
+                        <label htmlFor={category.id}>{category.name}</label> {/* Añadido htmlFor para accesibilidad */}
                     </div>
                 ))}
             </div>

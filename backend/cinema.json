@@ -95,7 +95,8 @@
       "title": "The Godfather",
       "video": false,
       "vote_average": 8.689,
-      "vote_count": 20996
+      "vote_count": 20996,
+      "platform": 4
     },
     {
       "adult": false,
@@ -114,7 +115,8 @@
       "title": "The Godfather Part II",
       "video": false,
       "vote_average": 8.57,
-      "vote_count": 12669
+      "vote_count": 12669,
+      "platform": 1
     },
     {
       "adult": false,
@@ -134,7 +136,8 @@
       "title": "Schindler's List",
       "video": false,
       "vote_average": 8.568,
-      "vote_count": 16127
+      "vote_count": 16127,
+      "platform": 3
     },
     {
       "adult": false,
@@ -152,7 +155,8 @@
       "title": "12 Angry Men",
       "video": false,
       "vote_average": 8.547,
-      "vote_count": 8862
+      "vote_count": 8862,
+      "platform": 2
     },
     {
       "adult": false,
@@ -172,7 +176,8 @@
       "title": "Spirited Away",
       "video": false,
       "vote_average": 8.537,
-      "vote_count": 16798
+      "vote_count": 16798,
+      "platform": 2
     },
     {
       "adult": false,
@@ -192,7 +197,8 @@
       "title": "Dilwale Dulhania Le Jayenge",
       "video": false,
       "vote_average": 8.5,
-      "vote_count": 4458
+      "vote_count": 4458,
+      "platform": 2
     },
     {
       "adult": false,
@@ -213,7 +219,8 @@
       "title": "The Dark Knight",
       "video": false,
       "vote_average": 8.5,
-      "vote_count": 33377
+      "vote_count": 33377,
+      "platform": 2
     },
     {
       "adult": false,
@@ -233,7 +240,8 @@
       "title": "The Green Mile",
       "video": false,
       "vote_average": 8.507,
-      "vote_count": 17772
+      "vote_count": 17772,
+      "platform": 2
     },
     {
       "adult": false,
@@ -253,7 +261,8 @@
       "title": "Parasite",
       "video": false,
       "vote_average": 8.502,
-      "vote_count": 18629
+      "vote_count": 18629,
+      "platform": 2
     },
     {
       "adult": false,
@@ -272,7 +281,8 @@
       "title": "Pulp Fiction",
       "video": false,
       "vote_average": 8.488,
-      "vote_count": 28293
+      "vote_count": 28293,
+      "platform": 2
     },
     {
       "adult": false,
@@ -292,7 +302,8 @@
       "title": "Your Name.",
       "video": false,
       "vote_average": 8.487,
-      "vote_count": 11573
+      "vote_count": 11573,
+      "platform": 2
     },
     {
       "adult": false,
@@ -312,7 +323,8 @@
       "title": "The Lord of the Rings: The Return of the King",
       "video": false,
       "vote_average": 8.484,
-      "vote_count": 24625
+      "vote_count": 24625,
+      "platform": 2
     },
     {
       "adult": false,
@@ -332,7 +344,8 @@
       "title": "Forrest Gump",
       "video": false,
       "vote_average": 8.469,
-      "vote_count": 27812
+      "vote_count": 27812,
+      "platform": 2
     },
     {
       "adult": false,
@@ -350,7 +363,8 @@
       "title": "The Good, the Bad and the Ugly",
       "video": false,
       "vote_average": 8.461,
-      "vote_count": 8793
+      "vote_count": 8793,
+      "platform": 2
     },
     {
       "adult": false,
@@ -369,7 +383,8 @@
       "title": "GoodFellas",
       "video": false,
       "vote_average": 8.457,
-      "vote_count": 13092
+      "vote_count": 13092,
+      "platform": 8
     },
     {
       "adult": false,
@@ -388,7 +403,8 @@
       "title": "Seven Samurai",
       "video": false,
       "vote_average": 8.5,
-      "vote_count": 3784
+      "vote_count": 3784,
+      "platform": 9
     },
     {
       "adult": false,
@@ -408,7 +424,8 @@
       "title": "Interstellar",
       "video": false,
       "vote_average": 8.451,
-      "vote_count": 36437
+      "vote_count": 36437,
+      "platform": 6
     },
     {
       "adult": false,
@@ -427,7 +444,8 @@
       "title": "Life Is Beautiful",
       "video": false,
       "vote_average": 8.447,
-      "vote_count": 13180
+      "vote_count": 13180,
+      "platform": 2
     }
   ],
   "platforms": [
