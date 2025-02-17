@@ -96,7 +96,7 @@
       "video": false,
       "vote_average": 8.689,
       "vote_count": 20996,
-      "platform": 4
+      "platform": [4]
     },
     {
       "adult": false,
@@ -116,7 +116,7 @@
       "video": false,
       "vote_average": 8.57,
       "vote_count": 12669,
-      "platform": 1
+      "platform": [1,2]
     },
     {
       "adult": false,
@@ -137,7 +137,7 @@
       "video": false,
       "vote_average": 8.568,
       "vote_count": 16127,
-      "platform": 3
+      "platform": [3]
     },
     {
       "adult": false,
@@ -156,7 +156,7 @@
       "video": false,
       "vote_average": 8.547,
       "vote_count": 8862,
-      "platform": 2
+      "platform": [5,2]
     },
     {
       "adult": false,
@@ -177,7 +177,7 @@
       "video": false,
       "vote_average": 8.537,
       "vote_count": 16798,
-      "platform": 2
+      "platform": [1,2]
     },
     {
       "adult": false,
@@ -198,7 +198,7 @@
       "video": false,
       "vote_average": 8.5,
       "vote_count": 4458,
-      "platform": 2
+      "platform": [6,2]
     },
     {
       "adult": false,
@@ -220,7 +220,7 @@
       "video": false,
       "vote_average": 8.5,
       "vote_count": 33377,
-      "platform": 2
+      "platform": [8,2]
     },
     {
       "adult": false,
@@ -241,7 +241,7 @@
       "video": false,
       "vote_average": 8.507,
       "vote_count": 17772,
-      "platform": 2
+      "platform": [7,2]
     },
     {
       "adult": false,
@@ -262,7 +262,7 @@
       "video": false,
       "vote_average": 8.502,
       "vote_count": 18629,
-      "platform": 2
+      "platform": [3,4]
     },
     {
       "adult": false,
@@ -282,7 +282,7 @@
       "video": false,
       "vote_average": 8.488,
       "vote_count": 28293,
-      "platform": 2
+      "platform": [1,2]
     },
     {
       "adult": false,
@@ -303,7 +303,7 @@
       "video": false,
       "vote_average": 8.487,
       "vote_count": 11573,
-      "platform": 2
+      "platform": [1,2]
     },
     {
       "adult": false,
@@ -404,7 +404,7 @@
       "video": false,
       "vote_average": 8.5,
       "vote_count": 3784,
-      "platform": 9
+      "platform": [1,2]
     },
     {
       "adult": false,
@@ -425,7 +425,7 @@
       "video": false,
       "vote_average": 8.451,
       "vote_count": 36437,
-      "platform": 6
+      "platform": [5,2]
     },
     {
       "adult": false,
@@ -445,7 +445,7 @@
       "video": false,
       "vote_average": 8.447,
       "vote_count": 13180,
-      "platform": 2
+      "platform": [1,7]
     }
   ],
   "platforms": [

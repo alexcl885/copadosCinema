@@ -3,6 +3,7 @@ import "./CategoryCheckBox.css"; // Importamos los estilos
 
 const CategoryCheckBox = ({ searchByGenre }) => {
     const [categories, setCategories] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState(null);
 
     /**
      * Function to get all categories of movies
@@ -11,7 +12,7 @@ const CategoryCheckBox = ({ searchByGenre }) => {
         try {
             const response = await fetch(`http://localhost:3000/genres`);
             const data = await response.json();
-            setCategories(data); 
+            setCategories(data);
         } catch (error) {
             console.error("Error to get the categories:", error);
         }
@@ -21,6 +22,16 @@ const CategoryCheckBox = ({ searchByGenre }) => {
         fetchCategories();
     }, []);
 
+    const handleCategoryChange = (categoryId) => {
+        if (selectedCategory === categoryId) {
+            setSelectedCategory(null);
+            searchByGenre(null); // Muestra todas las películas
+        } else {
+            setSelectedCategory(categoryId);
+            searchByGenre(categoryId);
+        }
+    };
+
     return (
         <div className="category-checkbox-container">
             <h3>Filter Category</h3>
@@ -28,12 +39,13 @@ const CategoryCheckBox = ({ searchByGenre }) => {
                 {categories.map((category) => (
                     <div key={category.id} className="category-checkbox-item">
                         <input
-                            type="checkbox"
+                            type="radio"
                             id={category.id}
-                            name={category.name}
-                            onChange={() => searchByGenre(category.id)} // Cambio de onClick a onChange
+                            name="category" // Todos los radios comparten el mismo nombre
+                            checked={selectedCategory === category.id}
+                            onChange={() => handleCategoryChange(category.id)}
                         />
-                        <label htmlFor={category.id}>{category.name}</label> {/* Añadido htmlFor para accesibilidad */}
+                        <label htmlFor={category.id}>{category.name}</label>
                     </div>
                 ))}
             </div>

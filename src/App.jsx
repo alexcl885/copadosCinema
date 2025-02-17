@@ -69,20 +69,22 @@ function App() {
     }
   };
 
-  const searchByCategory = async (categId) => {
+  const searchByPlatForm = async (platId) => {
     try {
         const response = await fetch("http://localhost:3000/movies"); 
-        if (!response.ok) {
-            throw new Error("Error al obtener los datos");
-        }
         const data = await response.json();
         
-        const filteredMovies = data.movies.filter(movie => movie.genre_ids.includes(parseInt(categId)));
-        return filteredMovies;
+        const filteredMovies = data.filter(movie => 
+            Array.isArray(movie.platform) && movie.platform.includes(parseInt(platId))
+        );
+
+        setMovies(filteredMovies);
     } catch (error) {
         console.error("Error fetching movies:", error);
     }
-  };
+};
+
+
 
   
 
@@ -97,7 +99,7 @@ function App() {
     <>
       <Header /><br /><br /><br /><br />
       <SearchMovie searchMovies={searchOneMovie} setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
-      <CheckBoxMain searchByGenre={searchByGenre} searchByCategory={searchByCategory} />
+      <CheckBoxMain searchByGenre={searchByGenre} searchByPlatForm={searchByPlatForm} />
       <ListMovies movies={movies} deleteMovie={deleteMovie} />
       <Footer />
     </>

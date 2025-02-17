@@ -3,7 +3,7 @@ import CategoryCheckBox from "./CategoryCheckBox/CategoryCheckBox";
 import PlatformCheckBox from "./PlatformCheckBox/PlatformCheckBox";
 import "./CheckBoxMain.css"; 
 
-const CheckBoxMain = ({ searchByGenre , searchByCategory}) => {
+const CheckBoxMain = ({ searchByGenre , searchByPlatForm}) => {
     const [showFilterCategory, setFilterCategory] = useState(false);
     const [showFilterPlatform, setFilterPlatform] = useState(false);
 
@@ -31,7 +31,7 @@ const CheckBoxMain = ({ searchByGenre , searchByCategory}) => {
             />
             <div className="filters-container">
                 {showFilterCategory && <CategoryCheckBox searchByGenre={searchByGenre} />}
-                {showFilterPlatform && <PlatformCheckBox searchByCategory={searchByCategory}/>}
+                {showFilterPlatform && <PlatformCheckBox searchByPlatForm={searchByPlatForm}/>}
             </div>
         </div>
     );
