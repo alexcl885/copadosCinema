@@ -1,43 +1,54 @@
-/* Estilos para CheckBoxMain */
+/* Contenedor principal */
 .checkbox-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     padding: 20px;
 }
 
+/* Estilo moderno para los botones */
 .checkbox-button {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: rgba(255, 255, 255, 0.1);
     color: white;
-    border: none;
-    padding: 10px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 25px;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease-in-out;
 }
 
 .checkbox-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
 .checkbox-button:active {
     transform: scale(0.95);
 }
 
+/* Contenedor de los filtros */
 .filters-container {
     margin-top: 15px;
-    padding: 10px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.3s ease-in-out;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.4s ease-in-out;
 }
 
+/* Animación suave */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -11,7 +11,12 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
 
-  
+
+  /**
+   * This arrow function delete a movie of my own API
+   * @param {*} id 
+   * @returns if a movie has been deleted or not
+   */
   const deleteMovie = async (id) => {
     const response = await fetch(`http://localhost:3000/movies/${id}`, {
       method: 'DELETE'
@@ -69,6 +74,10 @@ function App() {
     }
   };
 
+  /**
+   * This arrow function show the list of movies by platform
+   * @param {*} platId 
+   */
   const searchByPlatForm = async (platId) => {
     try {
         const response = await fetch("http://localhost:3000/movies"); 
@@ -82,7 +91,7 @@ function App() {
     } catch (error) {
         console.error("Error fetching movies:", error);
     }
-};
+  };
 
 
 
@@ -95,6 +104,7 @@ function App() {
       searchOneMovie(searchTerm);
     }
   }, [searchTerm]);
+  
   return (
     <>
       <Header /><br /><br /><br /><br />

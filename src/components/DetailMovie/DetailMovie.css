@@ -1,4 +1,4 @@
-/**This css is realized with chatgpt and its very interesting*/
+/** This CSS is realized with ChatGPT and it's very interesting */
 .detail-movie-overlay {
     position: fixed;
     top: 0;
@@ -12,28 +12,28 @@
     animation: fadeIn 0.5s ease-in-out forwards;
 }
 
-
 .detail-movie-dialog {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
-    background: rgba(10, 10, 30, 0.85); /* Semi-transparente con un azul oscuro */
+    background: rgba(10, 10, 30, 0.85);
     color: white;
     padding: 35px;
     border-radius: 20px;
     backdrop-filter: blur(30px);
-    box-shadow: 
-        0 0 25px rgba(0, 200, 255, 0.9),
-        0 0 50px rgba(0, 200, 255, 0.5) inset;
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.9), 0 0 50px rgba(0, 200, 255, 0.5) inset;
     border: 3px solid rgba(0, 200, 255, 0.8);
     text-align: center;
     z-index: 1000;
-    width: 420px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-sizing: border-box;
     opacity: 0;
     animation: appear 0.6s ease-out forwards;
 }
-
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -46,7 +46,6 @@
     100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 }
 
-
 .detail-movie-dialog h5 {
     margin: 0 0 15px;
     font-size: 2rem;
@@ -55,7 +54,6 @@
     text-shadow: 0 0 15px rgba(0, 225, 255, 1);
     letter-spacing: 1px;
 }
-
 
 .detail-movie-dialog p {
     margin: 10px 0;
@@ -75,22 +73,18 @@
     font-size: 1.1rem;
     font-weight: bold;
     transition: 0.3s ease-in-out;
-    box-shadow: 
-        0 0 15px rgba(0, 225, 255, 0.7),
-        0 0 30px rgba(0, 225, 255, 0.5) inset;
+    box-shadow: 0 0 15px rgba(0, 225, 255, 0.7), 0 0 30px rgba(0, 225, 255, 0.5) inset;
     outline: none;
     position: relative;
     overflow: hidden;
     animation: pulse 1.5s infinite;
 }
 
-
 @keyframes pulse {
     0% { box-shadow: 0 0 15px rgba(0, 225, 255, 0.7); }
     50% { box-shadow: 0 0 30px rgba(0, 225, 255, 1); }
     100% { box-shadow: 0 0 15px rgba(0, 225, 255, 0.7); }
 }
-
 
 .detail-movie-dialog input:hover {
     background: linear-gradient(135deg, #0066ff, #00e1ff);

@@ -1,84 +1,85 @@
-/* Estilo futurista para ListMovies */
+/* futurist style to show ListMovies */
 .list-movies {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  padding: 20px;
-  background: radial-gradient(circle, #0f0f0f 30%, #1a1a2e 90%);
+  padding: 40px;
+  background: radial-gradient(circle, #0a0a0a 20%, #111133 80%);
   
 }
 
 .list-movies__item {
   list-style: none;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-  max-width: 300px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+  max-width: 320px;
   text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s;
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
+  border: 2px solid rgba(0, 255, 255, 0.4);
 }
 
 .list-movies__item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.9);
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 1);
 }
 
 .list-movies__item p {
   margin: 5px 0;
-  font-size: 14px;
+  font-size: 16px;
   color: #0ff;
-  text-shadow: 0 0 5px cyan;
+  text-shadow: 0 0 10px cyan;
 }
 
 .list-movies__image {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-top: 10px;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
+  transition: transform 0.4s ease-in-out;
 }
 
 .list-movies__image:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .list-movies__button {
   background: linear-gradient(45deg, #00ffcc, #0033ff);
   color: white;
   border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
+  padding: 12px 18px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.3s ease-in-out, transform 0.2s;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+  transition: background 0.4s ease-in-out, transform 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
 }
 
 .list-movies__button:hover {
   background: linear-gradient(45deg, #0033ff, #00ffcc);
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+  transform: scale(1.2);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 1);
 }
 
 .list-movies__button--danger {
   background: linear-gradient(45deg, #ff0000, #ff6600);
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 1);
   border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
+  padding: 12px 18px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.3s ease-in-out, transform 0.2s;
+  transition: background 0.4s ease-in-out, transform 0.3s;
 }
 
 .list-movies__button--danger:hover {
   background: linear-gradient(45deg, #ff6600, #ff0000);
-  box-shadow: 0 0 20px rgba(255, 0, 0, 1);
-  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 1);
+  transform: scale(1.2);
 }

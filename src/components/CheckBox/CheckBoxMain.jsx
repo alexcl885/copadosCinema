@@ -1,37 +1,30 @@
 import { useState } from "react";
 import CategoryCheckBox from "./CategoryCheckBox/CategoryCheckBox";
 import PlatformCheckBox from "./PlatformCheckBox/PlatformCheckBox";
-import "./CheckBoxMain.css"; 
+import "./CheckBoxMain.css";
 
-const CheckBoxMain = ({ searchByGenre , searchByPlatForm}) => {
-    const [showFilterCategory, setFilterCategory] = useState(false);
-    const [showFilterPlatform, setFilterPlatform] = useState(false);
+const CheckBoxMain = ({ searchByGenre, searchByPlatForm }) => {
+    const [filters, setFilters] = useState({
+        category: false,
+        platform: false,
+    });
 
-    const changeFilterCategory = () => {
-        setFilterCategory(!showFilterCategory);
-    };
-
-    const changeFilterPlatform = () => {
-        setFilterPlatform(!showFilterPlatform);
+    const toggleFilter = (filter) => {
+        setFilters((prev) => ({ ...prev, [filter]: !prev[filter] }));
     };
 
     return (
         <div className="checkbox-container">
-            <input 
-                type="button" 
-                value="Filter Category" 
-                onClick={changeFilterCategory} 
-                className="checkbox-button"
-            />
-            <input 
-                type="button" 
-                value="Filter Platform" 
-                onClick={changeFilterPlatform} 
-                className="checkbox-button"
-            />
+            <button onClick={() => toggleFilter("category")} className="checkbox-button">
+                {filters.category ? "Hide Category" : "Filter Category"}
+            </button>
+            <button onClick={() => toggleFilter("platform")} className="checkbox-button">
+                {filters.platform ? "Hide Platform" : "Filter Platform"}
+            </button>
+
             <div className="filters-container">
-                {showFilterCategory && <CategoryCheckBox searchByGenre={searchByGenre} />}
-                {showFilterPlatform && <PlatformCheckBox searchByPlatForm={searchByPlatForm}/>}
+                {filters.category && <CategoryCheckBox searchByGenre={searchByGenre} />}
+                {filters.platform && <PlatformCheckBox searchByPlatForm={searchByPlatForm} />}
             </div>
         </div>
     );
