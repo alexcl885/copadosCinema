@@ -5,6 +5,8 @@ import Footer from './components/Footer/Footer';
 import SearchMovie from './components/SearchMovie/SearchMovie';
 import CheckBoxMain from './components/CheckBox/CheckBoxMain';
 import ListMovies from './components/ListMovies/ListMovies';
+import HomePage from './pages/HomePage';
+import Home from './components/Home/Home';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -108,6 +110,7 @@ function App() {
   return (
     <>
       <Header /><br /><br /><br /><br />
+      {/**<Home></Home> (when i have router)*/}
       <SearchMovie searchMovies={searchOneMovie} setSearchTerm={setSearchTerm} searchTerm={searchTerm} />
       <CheckBoxMain searchByGenre={searchByGenre} searchByPlatForm={searchByPlatForm} />
       <ListMovies movies={movies} deleteMovie={deleteMovie} />
