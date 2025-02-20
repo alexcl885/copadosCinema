@@ -177,6 +177,29 @@ Code:
 ```
 ---
 
+
+## IN THIS VERSION (jwt)
+
+Now i've installed a new dependencias to can execute this proyect
+
+```bash
+npm install express
+npm install react-router-dom
+npm install json-server-auth
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 🛠️ Technologies Used
 - **React + Vite** → For a fast and optimized frontend experience.
 - **json-server** → For simulating a backend API with test data.

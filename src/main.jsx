@@ -1,6 +1,8 @@
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import AppRouter from './AppRouter'
+
 
 createRoot(document.getElementById('root')).render(  
-    <App/>
+    //Luego lo pondre<App/>
+    <AppRouter/>
 )
