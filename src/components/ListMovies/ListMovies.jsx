@@ -1,7 +1,7 @@
 import { useState } from "react";
 import DetailMovie from "../DetailMovie/DetailMovie";
 import "./ListMovies.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const ListMovies = ({ movies, deleteMovie }) => {
   const [movieSelect, setMovieSelect] = useState("");
