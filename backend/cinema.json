@@ -1,4 +1,21 @@
 {
+  "users": [
+    {
+      "email": "alex@gmail.com",
+      "password": "$2a$10$5KrSe30mDvGTdoEjH2U8XeD8wtqegYhnWQ5q9zz4G4NE5p67PgUgS",
+      "id": 1
+    },
+    {
+      "email": "ana@gmail.com",
+      "password": "$2a$10$cWKEDaF/4/mOuRHeRnm5r.68EUWqaJswEtN9pIuyt/U33xk0uVuyG",
+      "id": 2
+    },
+    {
+      "email": "antonio@gmail.com",
+      "password": "$2a$10$etwL.vWoWlKqvTEkEBIGTOgF/X3TacZmpyBeXBP3FgmW5wVtCPZE2",
+      "id": 3
+    }
+  ],
   "genres": [
     {
       "id": "28",

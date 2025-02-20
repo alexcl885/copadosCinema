@@ -7,12 +7,16 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "servidor": "json-server backend/cinema.json -m node_modules/json-server-auth -r backend/routes.json"
   },
   "dependencies": {
+    "express": "^4.21.2",
     "json-server": "^1.0.0-beta.3",
+    "json-server-auth": "^2.1.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
