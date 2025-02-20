@@ -1,4 +1,6 @@
 {
     "/users*": "/600/users$1",
-    "/equipos*": "/640/movies$1"
-}
+    "/movies*": "/640/movies$1"
+
+  }
+  

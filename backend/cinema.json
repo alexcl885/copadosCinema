@@ -14,6 +14,11 @@
       "email": "antonio@gmail.com",
       "password": "$2a$10$etwL.vWoWlKqvTEkEBIGTOgF/X3TacZmpyBeXBP3FgmW5wVtCPZE2",
       "id": 3
+    },
+    {
+      "email": "alexcopado@gmail.com",
+      "password": "$2a$10$69lXQNKDrh4W/alchGMPs.ocDDp.0m1e8vOq6crXE0/hCsgpVC9CW",
+      "id": 4
     }
   ],
   "genres": [
@@ -113,7 +118,9 @@
       "video": false,
       "vote_average": 8.689,
       "vote_count": 20996,
-      "platform": [4]
+      "platform": [
+        4
+      ]
     },
     {
       "adult": false,
@@ -133,7 +140,10 @@
       "video": false,
       "vote_average": 8.57,
       "vote_count": 12669,
-      "platform": [1,2]
+      "platform": [
+        1,
+        2
+      ]
     },
     {
       "adult": false,
@@ -154,7 +164,9 @@
       "video": false,
       "vote_average": 8.568,
       "vote_count": 16127,
-      "platform": [3]
+      "platform": [
+        3
+      ]
     },
     {
       "adult": false,
@@ -173,7 +185,10 @@
       "video": false,
       "vote_average": 8.547,
       "vote_count": 8862,
-      "platform": [5,2]
+      "platform": [
+        5,
+        2
+      ]
     },
     {
       "adult": false,
@@ -194,7 +209,10 @@
       "video": false,
       "vote_average": 8.537,
       "vote_count": 16798,
-      "platform": [1,2]
+      "platform": [
+        1,
+        2
+      ]
     },
     {
       "adult": false,
@@ -215,7 +233,10 @@
       "video": false,
       "vote_average": 8.5,
       "vote_count": 4458,
-      "platform": [6,2]
+      "platform": [
+        6,
+        2
+      ]
     },
     {
       "adult": false,
@@ -237,7 +258,10 @@
       "video": false,
       "vote_average": 8.5,
       "vote_count": 33377,
-      "platform": [8,2]
+      "platform": [
+        8,
+        2
+      ]
     },
     {
       "adult": false,
@@ -258,7 +282,10 @@
       "video": false,
       "vote_average": 8.507,
       "vote_count": 17772,
-      "platform": [7,2]
+      "platform": [
+        7,
+        2
+      ]
     },
     {
       "adult": false,
@@ -279,7 +306,10 @@
       "video": false,
       "vote_average": 8.502,
       "vote_count": 18629,
-      "platform": [3,4]
+      "platform": [
+        3,
+        4
+      ]
     },
     {
       "adult": false,
@@ -299,7 +329,10 @@
       "video": false,
       "vote_average": 8.488,
       "vote_count": 28293,
-      "platform": [1,2]
+      "platform": [
+        1,
+        2
+      ]
     },
     {
       "adult": false,
@@ -320,7 +353,10 @@
       "video": false,
       "vote_average": 8.487,
       "vote_count": 11573,
-      "platform": [1,2]
+      "platform": [
+        1,
+        2
+      ]
     },
     {
       "adult": false,
@@ -421,7 +457,10 @@
       "video": false,
       "vote_average": 8.5,
       "vote_count": 3784,
-      "platform": [1,2]
+      "platform": [
+        1,
+        2
+      ]
     },
     {
       "adult": false,
@@ -442,7 +481,10 @@
       "video": false,
       "vote_average": 8.451,
       "vote_count": 36437,
-      "platform": [5,2]
+      "platform": [
+        5,
+        2
+      ]
     },
     {
       "adult": false,
@@ -462,15 +504,17 @@
       "video": false,
       "vote_average": 8.447,
       "vote_count": 13180,
-      "platform": [1,7]
+      "platform": [
+        1,
+        7
+      ]
     },
     {
-
       "adult": false,
       "backdrop_path": "/qJzloL8O9YHhiWBrhlPfKAtZu2I.jpg",
       "genre_ids": [
-          28,
-          878
+        28,
+        878
       ],
       "id": 20,
       "original_language": "en",
@@ -483,50 +527,53 @@
       "video": false,
       "vote_average": 7.303,
       "vote_count": 19339,
-      "platform": [1,7]
-  },
-  {
-
-    "adult": false,
-    "backdrop_path": "/ac0kRKTfiJ4GcoUfb0XIO5vgC8q.jpg",
-    "genre_ids": [
+      "platform": [
+        1,
+        7
+      ]
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ac0kRKTfiJ4GcoUfb0XIO5vgC8q.jpg",
+      "genre_ids": [
         28,
         12,
         878
-    ],
-    "id": 21,
-    "original_language": "en",
-    "original_title": "The Amazing Spider-Man",
-    "overview": "Peter Parker is an outcast high schooler abandoned by his parents as a boy, leaving him to be raised by his Uncle Ben and Aunt May. Like most teenagers, Peter is trying to figure out who he is and how he got to be the person he is today. As Peter discovers a mysterious briefcase that belonged to his father, he begins a quest to understand his parents' disappearance – leading him directly to Oscorp and the lab of Dr. Curt Connors, his father's former partner. As Spider-Man is set on a collision course with Connors' alter ego, The Lizard, Peter will make life-altering choices to use his powers and shape his destiny to become a hero.",
-    "popularity": 85.962,
-    "poster_path": "/jexoNYnPd6vVrmygwF6QZmWPFdu.jpg",
-    "release_date": "2012-06-23",
-    "title": "The Amazing Spider-Man",
-    "video": false,
-    "vote_average": 6.709,
-    "vote_count": 17517,
-    "platform": [1,9]
-
-  },
-  {
-
-    "adult": false,
-    "backdrop_path": "/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
-    "genre_ids": [
+      ],
+      "id": 21,
+      "original_language": "en",
+      "original_title": "The Amazing Spider-Man",
+      "overview": "Peter Parker is an outcast high schooler abandoned by his parents as a boy, leaving him to be raised by his Uncle Ben and Aunt May. Like most teenagers, Peter is trying to figure out who he is and how he got to be the person he is today. As Peter discovers a mysterious briefcase that belonged to his father, he begins a quest to understand his parents' disappearance – leading him directly to Oscorp and the lab of Dr. Curt Connors, his father's former partner. As Spider-Man is set on a collision course with Connors' alter ego, The Lizard, Peter will make life-altering choices to use his powers and shape his destiny to become a hero.",
+      "popularity": 85.962,
+      "poster_path": "/jexoNYnPd6vVrmygwF6QZmWPFdu.jpg",
+      "release_date": "2012-06-23",
+      "title": "The Amazing Spider-Man",
+      "video": false,
+      "vote_average": 6.709,
+      "vote_count": 17517,
+      "platform": [
+        1,
+        9
+      ]
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
+      "genre_ids": [
         18
-    ],
-    "id": 22,
-    "original_language": "en",
-    "original_title": "Fight Club",
-    "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground  forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
-    "popularity": 146.609,
-    "poster_path": "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
-    "release_date": "1999-10-15",
-    "title": "Fight Club",
-    "video": false,
-    "vote_average": 8.438,
-    "vote_count": 29840
-  }
+      ],
+      "id": 22,
+      "original_language": "en",
+      "original_title": "Fight Club",
+      "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground  forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+      "popularity": 146.609,
+      "poster_path": "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+      "release_date": "1999-10-15",
+      "title": "Fight Club",
+      "video": false,
+      "vote_average": 8.438,
+      "vote_count": 29840
+    }
   ],
   "platforms": [
     {

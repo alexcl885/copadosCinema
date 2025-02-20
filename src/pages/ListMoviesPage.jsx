@@ -4,7 +4,7 @@ const ListMoviesPage = () => {
     return ( 
         <>  
             {/**list of movies */}
-            <ListMovies/>
+            <ListMovies movies={movies} deleteMovie={deleteMovie}/>
         </>
      );
 }
