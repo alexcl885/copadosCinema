@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const TOKEN_KEY = 'TOKEN';
 
@@ -51,6 +52,7 @@ const AuthProvider = ({ children }) => {
             id: 0
         });
         localStorage.removeItem(TOKEN_KEY);
+        useNavigate("/")
     }
 
     const register = async (email, password) => {

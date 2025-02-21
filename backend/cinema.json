@@ -19,6 +19,26 @@
       "email": "alexcopado@gmail.com",
       "password": "$2a$10$69lXQNKDrh4W/alchGMPs.ocDDp.0m1e8vOq6crXE0/hCsgpVC9CW",
       "id": 4
+    },
+    {
+      "email": "alexcopado20@gmail.com",
+      "password": "$2a$10$Sf/jSAD5fyKSvKINxXay/OwEekpthF4gZ3vzm0ujQwef/axUDG.om",
+      "id": 5
+    },
+    {
+      "email": "alexcopadooo@gmail.com",
+      "password": "$2a$10$eUlBZCSguttWOyB1tlx9Vu8Hi4dGqSez1GNWrD7hc5wQ5BJt/THO2",
+      "id": 6
+    },
+    {
+      "email": "migueloncopado@gmail.com",
+      "password": "$2a$10$JfgkTGrPknU712BKOSzKH.Pk3uidYoFswjaEvJBoslsixalzHPugC",
+      "id": 7
+    },
+    {
+      "email": "marcosarjona@gmail.com",
+      "password": "$2a$10$YPU30MndKUVkEC6I1bD3seVM4qxlHAehrhZJRL1O8pMjJrnr9oaLa",
+      "id": 8
     }
   ],
   "genres": [

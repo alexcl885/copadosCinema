@@ -1,6 +1,17 @@
+import { useContext } from "react";
 import "./Header.css";
+import { AuthContext } from "../../context/AuthContext";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+    /**
+     * Now to logout , i've got AuthContext to
+     * get the function of logout to put in logout label
+     */
+
+    const { logout, user } = useContext(AuthContext)
+
     return (
         <header className="header-cinema">
             <div className="header-logo">
@@ -8,10 +19,21 @@ const Header = () => {
             </div>
             <nav className="header-nav-menu">
                 <ul>
-                    <li><a href="/home">Inicio</a></li>
-                    <li><a href="#">Películas</a></li>
-                    <li><a href="#">Categorías</a></li>
-                    <li><a href="https://github.com/alexcl885/copadosCinema">Repositorio</a></li>
+                    <li><Link to={"/home"}>HOME</Link></li>
+                    <li><a href="/movies">Movies</a></li>
+                    <li><a href="https://github.com/alexcl885/copadosCinema">Repository</a></li>
+                    <li><Link to={"/about"}>About</Link></li>
+                    <li>
+                        {user.isLogged ? (
+                            <Button variant="outlined" color="error" onClick={logout}>Logout</Button>
+                        ) : (
+                            <Button color="success" variant="contained">
+                                <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Login</Link>
+                            </Button>
+                        )}
+                    </li>
+
+
                 </ul>
             </nav>
         </header>

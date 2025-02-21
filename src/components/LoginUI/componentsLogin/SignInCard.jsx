@@ -13,6 +13,10 @@ import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import ForgotPassword from './ForgotPassword';
 import { GoogleIcon, FacebookIcon, SitemarkIcon } from './CustomIcons';
+import { useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../../context/AuthContext';
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
@@ -39,6 +43,12 @@ export default function SignInCard() {
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('');
   const [open, setOpen] = React.useState(false);
 
+  //THINGS THAT I HAD IN LOGIN 
+  const {login} = useContext(AuthContext);
+  const email = useRef();
+  const password = useRef();
+  const navigate = useNavigate();
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -58,6 +68,17 @@ export default function SignInCard() {
       password: data.get('password'),
     });
   };
+
+  const handleSignIn = async (event) => {
+    event.preventDefault();
+    console.log(email.current.value);
+    if (email.current.value && password.current.value) {
+      const response = await login(email.current.value, password.current.value);
+      if (!response.error) {
+          navigate('/home');
+      }
+  }
+  }
 
   const validateInputs = () => {
     const email = document.getElementById('email');
@@ -100,7 +121,7 @@ export default function SignInCard() {
       </Typography>
       <Box
         component="form"
-        onSubmit={handleSubmit}
+        onSubmit={handleSignIn}
         noValidate
         sx={{ display: 'flex', flexDirection: 'column', width: '100%', gap: 2 }}
       >
@@ -115,6 +136,7 @@ export default function SignInCard() {
             placeholder="your@email.com"
             autoComplete="email"
             autoFocus
+            inputRef={email}
             required
             fullWidth
             variant="outlined"
@@ -143,6 +165,7 @@ export default function SignInCard() {
             id="password"
             autoComplete="current-password"
             autoFocus
+            inputRef={password}
             required
             fullWidth
             variant="outlined"
@@ -154,14 +177,14 @@ export default function SignInCard() {
           label="Remember me"
         />
         <ForgotPassword open={open} handleClose={handleClose} />
-        <Button type="submit" fullWidth variant="contained" onClick={validateInputs}>
+        <Button type="submit" fullWidth variant="contained" onClick={validateInputs} >
           Sign in
         </Button>
         <Typography sx={{ textAlign: 'center' }}>
           Don&apos;t have an account?{' '}
           <span>
             <Link
-              href="/material-ui/getting-started/templates/sign-in/"
+              href="/register"
               variant="body2"
               sx={{ alignSelf: 'center' }}
             >

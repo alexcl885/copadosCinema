@@ -1,60 +1,62 @@
-/* home.module.css */
-
 .home-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 20px;
-    font-family: 'Poppins', sans-serif; /* Fuente más moderna */
-    background: linear-gradient(135deg, #f0f0f0, #e6e6e6); /* Fondo degradado sutil */
+    font-family: 'Poppins', sans-serif;
+    background: url('https://entrepreneurship.babson.edu/wp-content/uploads/2020/10/Movie-1200-630.jpg') no-repeat center center/cover;
     min-height: 100vh;
     text-align: center;
+    position: relative;
+    color: white;
 }
 
-/* Título estilizado */
+/* Superposición oscura para mejorar legibilidad */
+.home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Oscurece la imagen */
+    z-index: 1;
+}
+
+/* Ajuste de texto */
+.home-title, .home-description {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilos del título */
 .home-title {
     font-size: 3em;
-    color: #222; /* Color más intenso */
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 15px;
-    position: relative;
 }
 
-/* Línea decorativa debajo del título */
+/* Línea decorativa */
 .home-title::after {
     content: "";
     width: 60px;
     height: 4px;
-    background: #ff7f50; /* Un color vibrante */
+    background: #ff7f50;
     display: block;
     margin: 8px auto 0;
     border-radius: 2px;
 }
 
-/* Descripción con un mejor ajuste de lectura */
+/* Descripción */
 .home-description {
     font-size: 1.2em;
-    color: #444;
     max-width: 700px;
     margin-bottom: 25px;
     line-height: 1.6;
     opacity: 0.9;
-}
-
-/* Imagen con efectos más atractivos */
-.home-image {
-    max-width: 70%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.home-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsividad */
@@ -65,10 +67,6 @@
 
     .home-description {
         font-size: 1em;
-    }
-
-    .home-image {
-        max-width: 90%;
     }
 }
 

@@ -1,34 +1,59 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {  createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
-import Login from "./components/Login/Login";
-import Register from "./components/Register/Register";
 import Layout from "./components/Layout/Layout";
 import HomePage from "./pages/HomePage";
-
 import ListMoviesPage from "./pages/ListMoviesPage";
+import { MoviesProvider } from "./context/MoviesContext";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
 
+import './App.css';
 
+/**
+ * ALL MY ROUTES IN MY APPLICATION
+ */
+const router = createBrowserRouter([
+    {
+        path:"/",
+        element:<Layout/>,
+        children:[
+            {
+                index:true,
+                element:<LoginPage></LoginPage>,
+            },
+            {
+                path: "home",
+                element: <HomePage></HomePage>
+            },
+            {
+                path: "/movies",
+                element: <ListMoviesPage></ListMoviesPage>
+            },
+            {
+                path: "logout",
+                element: <RegisterPage></RegisterPage>
+            },
+            {
+                path: "register",
+                element: <RegisterPage></RegisterPage>
+            }
+        ]
+    }
+])
 
 const AppRouter = () => {
     return ( 
-        <>
-            <p>Bienvenido!</p>
-            <AuthProvider>
-                <BrowserRouter>
-                    <Routes>
-                        <Route path="/" element={<Login/>} />
-                        <Route path="/register" element={<Register />} />
-                        <Route path="/home" element={<Layout />}>
-                            <Route index element={<HomePage/>}/>
-                            <Route path="/home/movies" element={<ListMoviesPage/>}/>
-                        </Route>
-                            
+        <>  
+        <AuthProvider>
+            <MoviesProvider>
 
-                    </Routes>
-                </BrowserRouter>
-            </AuthProvider>
+            <RouterProvider router={router}/>
+
+            </MoviesProvider>
+        </AuthProvider>
         </>
-     );
+    );
 }
  
 export default AppRouter;
+
