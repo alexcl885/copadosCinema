@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { createContext } from "react";
-import { TOKEN_KEY } from "./AuthContext";
+import { AuthContext, TOKEN_KEY } from "./AuthContext";
 
 
 const MoviesContext = createContext();
 
 
 const MoviesProvider = ({ children }) => {
+
+    const { user } = useContext(AuthContext);
 
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
@@ -114,7 +116,7 @@ const MoviesProvider = ({ children }) => {
         } else {
             searchOneMovie(searchTerm);
         }
-    }, [searchTerm]);
+    }, [searchTerm, user]);
 
 
     return (

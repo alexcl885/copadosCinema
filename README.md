@@ -177,50 +177,184 @@ Code:
 ```
 ---
 
+## 🔄 Second Version (JWT Authentication)
+### 🔑 Added Features
+To enhance security and user management, **JWT authentication** has been integrated.
 
-## IN THIS VERSION (jwt)
-
-Now i've installed a new dependencias to can execute this proyect
-
+### 🔧 New Dependencies Installed
 ```bash
 npm install express
 npm install react-router-dom
 npm install json-server-auth
 ```
 
+## 🔒Authentication & Route Protection
+To implement authentication and route protection, I created a `routes.json` file with the following content:
 
-## MATERIAL UI
+```json
+{
+    "/users*": "/600/users$1",
+    "/movies*": "/640/movies$1"
+}
+```
 
-Installation
+This configuration ensures that certain routes require authentication, enhancing security.
+
+Additionally, user information is stored in `cinemas.json` through a **login and registration system**. The following context manages user authentication:
+
+```js
+import { createContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+export const TOKEN_KEY = 'TOKEN';
+
+const AuthContext = createContext();
+
+const AuthProvider = ({ children }) => {
+    const [user, setUser] = useState({
+        isLogged: false,
+        email: '',
+        id: 0,
+        jwt: ''
+    })
+
+    const login = async (email, password) => {
+        try {
+            const response = await fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            })
+
+            const userToken = await response.json();
+            if (response.status === 200) {
+                console.log(userToken);
+                localStorage.setItem(TOKEN_KEY, userToken.accessToken)
+                setUser({
+                    isLogged: true,
+                    email: userToken.user.email,
+                    id: userToken.user.id
+                })
+                return { error: false, data: 'Sesión iniciada correctamente' }
+            } else {
+                return { error: true, data: 'Usuario o contraseña incorrecta' };
+            }
+        } catch (error) {
+            return { error: true, data: 'Usuario o contraseña incorrecta' };
+        }
+    }
+
+    const logout = () => {
+        setUser({
+            isLogged: false,
+            email: '',
+            id: 0
+        });
+        localStorage.removeItem(TOKEN_KEY);
+        useNavigate("/")
+    }
+
+    const register = async (email, password) => {
+        try {
+            const response = await fetch('http://localhost:3000/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            })
+            const userToken = await response.json();
+            if (response.status === 201) {
+                return { error: false, data: 'Usuario registrado correctamente' }
+            } else {
+                return { error: true, data: 'Error al registrar usuario' };
+            }
+        } catch (error) {
+            return { error: true, data: 'Error al registrar el usuario' };
+        }
+    }
+
+    return (
+        <AuthContext.Provider value={{ user, setUser, login, register, logout }}>
+            {children}
+        </AuthContext.Provider>
+    )
+}
+
+export { AuthContext, AuthProvider };
+```
+---
+
+### 🏗️ Implementation of `react-router-dom`
+The project now includes **React Router** for improved navigation.
+
+#### **App Router Configuration:**
+```jsx
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import Layout from "./components/Layout/Layout";
+import HomePage from "./pages/HomePage";
+import ListMoviesPage from "./pages/ListMoviesPage";
+import { MoviesProvider } from "./context/MoviesContext";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
+import AboutPage from "./pages/AboutPage";
+
+const router = createBrowserRouter([
+    {
+        path:"/",
+        element:<Layout/>,
+        children:[
+            { index: true, element: <LoginPage /> },
+            { path: "home", element: <HomePage /> },
+            { path: "movies", element: <ListMoviesPage /> },
+            { path: "logout", element: <RegisterPage /> },
+            { path: "register", element: <RegisterPage /> },
+            { path: "about", element: <AboutPage /> }
+        ]
+    }
+]);
+
+const AppRouter = () => {
+    return (
+        <AuthProvider>
+            <MoviesProvider>
+                <RouterProvider router={router} />
+            </MoviesProvider>
+        </AuthProvider>
+    );
+};
+
+export default AppRouter;
+```
+
+## 🎨 Material UI Integration  
+To enhance the UI, **Material UI** has been installed and configured.  
+
+### 📦 Installation  
 ```bash
 npm install @mui/material @emotion/react @emotion/styled
-
 npm install @mui/material @mui/styled-engine-sc styled-components
 npm install @mui/icons-material
 npm install @fontsource/roboto
-```
+```  
 
+### 🛠️ Implementation  
+Throughout the project, **Material UI** has been used to improve the user experience with pre-designed components.  
 
-
-
-
-
-
-
+- **Login Page**: Implemented using the [Sign-In Side Template](https://github.com/mui/material-ui/tree/v6.4.5/docs/data/material/getting-started/templates/sign-in-side).  
+- **About Page**:  
+  - Utilizes the **Rating** component for user feedback:  
+    ```jsx
+    <Rating name="user-rating" defaultValue={4.5} precision={0.5} />
+    ```  
+  - Implements **Skeleton Loading (Pulsate Example)** for embedding YouTube videos:  
+    [Material UI Skeleton Example](https://mui.com/material-ui/react-skeleton/).
 
 
 ## 🛠️ Technologies Used
 - **React + Vite** → For a fast and optimized frontend experience.
 - **json-server** → For simulating a backend API with test data.
 - **CSS (Modern UI Design)** → Implementing a futuristic theme with **neon colors, smooth animations, and dark mode compatibility**.
-
----
-
-## 🔮 Future Improvements
-- **User Authentication** → Allow users to create accounts and manage their watchlists.
-- **Movie Reviews & Ratings** → Users can leave reviews and ratings to enhance engagement.
-- **Dark Mode Toggle** → Seamless theme switching between light and dark mode.
-- **Real API Integration** → Upgrade from `json-server` to a full-fledged backend solution.
+- **Material UI** → For a modern, responsive, and sleek UI.
 
 ---
 

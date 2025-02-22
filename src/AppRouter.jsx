@@ -8,6 +8,7 @@ import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 
 import './App.css';
+import AboutPage from "./pages/AboutPage";
 
 /**
  * ALL MY ROUTES IN MY APPLICATION
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
             {
                 path: "register",
                 element: <RegisterPage></RegisterPage>
+            },
+            {
+                path: "about",
+                element: <AboutPage></AboutPage>
             }
         ]
     }

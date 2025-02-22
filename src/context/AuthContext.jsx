@@ -1,11 +1,13 @@
 import { createContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 export const TOKEN_KEY = 'TOKEN';
 
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
+   
+
     const [user, setUser] = useState({
         isLogged: false,
         email: '',
@@ -45,15 +47,15 @@ const AuthProvider = ({ children }) => {
      * This function logout the user 
      * remove the token that is situated in localstorage
      */
-    const logout = () => {
+    const logout = (navigate) => {
         setUser({
             isLogged: false,
             email: '',
             id: 0
         });
         localStorage.removeItem(TOKEN_KEY);
-        useNavigate("/")
-    }
+        navigate("/"); // ← Pasamos `navigate` desde un componente
+    };
 
     const register = async (email, password) => {
         try {
