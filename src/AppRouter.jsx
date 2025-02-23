@@ -9,6 +9,7 @@ import LoginPage from "./pages/LoginPage";
 
 import './App.css';
 import AboutPage from "./pages/AboutPage";
+import ProfilePage from "./pages/ProfilePage";
 
 /**
  * ALL MY ROUTES IN MY APPLICATION
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
             {
                 path: "about",
                 element: <AboutPage></AboutPage>
+            },
+            {
+                path: "profile",
+                element: <ProfilePage></ProfilePage>
             }
         ]
     }

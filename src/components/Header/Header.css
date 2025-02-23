@@ -62,7 +62,7 @@
     text-shadow: 0px 0px 10px rgba(30, 144, 255, 0.8);
 }
 
-.profile-container {
+.profile-container-header {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -72,24 +72,24 @@
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.profile-container:hover {
+.profile-container-header:hover {
     background: rgba(30, 144, 255, 0.2);
     transform: scale(1.05);
 }
 
-.profile-container a {
+.profile-container-header a {
     display: flex;
     align-items: center;
 }
 
-.profile-container .MuiAvatar-root {
+.profile-container-header .MuiAvatar-root {
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     background-color: #1e90ff !important;
     color: white;
 }
 
-.profile-container .MuiAvatar-root:hover {
+.profile-container-header .MuiAvatar-root:hover {
     transform: scale(1.2);
     box-shadow: 0px 0px 15px rgba(30, 144, 255, 0.8);
 }
