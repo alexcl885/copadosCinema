@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { createContext } from "react";
 import { AuthContext, TOKEN_KEY } from "./AuthContext";
+import api from "../services/api";
 
 
 const MoviesContext = createContext();
@@ -19,30 +20,29 @@ const MoviesProvider = ({ children }) => {
      * This arrow function delete a movie of my own API
      * @param {*} id 
      * @returns if a movie has been deleted or not
+     * 
+     * This function have an error i dont know the error
      */
     const deleteMovie = async (id) => {
-        const token = localStorage.getItem(TOKEN_KEY);
-        const response = await fetch(`http://localhost:3000/movies/${id}`, {
-            headers: {'Authorization': `Bearer ${token}` },
-            method: 'DELETE'
-        });
+        console.log(id);
+        const response = await api.delete(`/movies/${id}`);
+        
         if (response.status === 200) {
-            downloadMovies();
+          downloadMovies();
         }
         return response.status === 200;
-    };
+      };
+    
     /**
      * This function search a movie. 
      * 
      */
     const searchOneMovie = async (movie) => {
-        const token = localStorage.getItem(TOKEN_KEY);
-        const response = await fetch('http://localhost:3000/movies',{
-            headers: {'Authorization': `Bearer ${token}` }
-        });
-        const apiMovies = await response.json();
+        
+        const apiMovies = await api.get('http://localhost:3000/movies');
+        
 
-        const filteredMovies = apiMovies.filter(mov =>
+        const filteredMovies = apiMovies.data.filter(mov =>
             mov.title.toLowerCase().includes(movie.toLowerCase())
         );
         setMovies(filteredMovies);
@@ -56,12 +56,8 @@ const MoviesProvider = ({ children }) => {
      * there are in my own API
     */
     const downloadMovies = async () => {
-        const token = localStorage.getItem(TOKEN_KEY);
-        const response = await fetch('http://localhost:3000/movies',{
-            headers: {'Authorization': `Bearer ${token}` },
-        });
-        const apiMovies = await response.json();
-        setMovies(apiMovies);
+        const apiMovies = await api.get('/movies');
+        setMovies(apiMovies.data);
     };
 
 
@@ -70,15 +66,12 @@ const MoviesProvider = ({ children }) => {
      * @param {*} genreId 
      */
     const searchByGenre = async (genreId) => {
-        const token = localStorage.getItem(TOKEN_KEY);
         try {
-            const response = await fetch('http://localhost:3000/movies',{
-                headers: {'Authorization': `Bearer ${token}` }
-            });
-            const apiMovies = await response.json();
-
+            const apiMovies = await api.get('http://localhost:3000/movies');
+            console.log(apiMovies);
+            
             // here i filter the movies that includes the genreId in genre_ids array
-            const filteredMovies = apiMovies.filter(movie => movie.genre_ids.includes(parseInt(genreId)));
+            const filteredMovies = apiMovies.data.filter(movie => movie.genre_ids.includes(parseInt(genreId)));
 
             console.log(filteredMovies);
 
@@ -90,20 +83,16 @@ const MoviesProvider = ({ children }) => {
 
     /**
      * This arrow function show the list of movies by platform
+     * in this function i've had to consult IA because i have no idea 
+     * to do this method
      * @param {*} platId 
      */
     const searchByPlatForm = async (platId) => {
-        const token = localStorage.getItem(TOKEN_KEY);
         try {
-            const response = await fetch("http://localhost:3000/movies",{
-                headers: {'Authorization': `Bearer ${token}` }
-            });
-            const data = await response.json();
-
-            const filteredMovies = data.filter(movie =>
+            const apiMovies = await api.get("/movies");
+            const filteredMovies = apiMovies.data.filter(movie =>
                 Array.isArray(movie.platform) && movie.platform.includes(parseInt(platId))
             );
-
             setMovies(filteredMovies);
         } catch (error) {
             console.error("Error fetching movies:", error);

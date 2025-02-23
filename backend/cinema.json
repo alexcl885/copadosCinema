@@ -1,44 +1,9 @@
 {
   "users": [
     {
-      "email": "alex@gmail.com",
-      "password": "$2a$10$5KrSe30mDvGTdoEjH2U8XeD8wtqegYhnWQ5q9zz4G4NE5p67PgUgS",
+      "email": "alejandro@gmail.com",
+      "password": "$2a$10$Id/PyjMFNKFWD30LBtmpuONfwdvJI0KjhSvyRy40kaykuZtoR51gG",
       "id": 1
-    },
-    {
-      "email": "ana@gmail.com",
-      "password": "$2a$10$cWKEDaF/4/mOuRHeRnm5r.68EUWqaJswEtN9pIuyt/U33xk0uVuyG",
-      "id": 2
-    },
-    {
-      "email": "antonio@gmail.com",
-      "password": "$2a$10$etwL.vWoWlKqvTEkEBIGTOgF/X3TacZmpyBeXBP3FgmW5wVtCPZE2",
-      "id": 3
-    },
-    {
-      "email": "alexcopado@gmail.com",
-      "password": "$2a$10$69lXQNKDrh4W/alchGMPs.ocDDp.0m1e8vOq6crXE0/hCsgpVC9CW",
-      "id": 4
-    },
-    {
-      "email": "alexcopado20@gmail.com",
-      "password": "$2a$10$Sf/jSAD5fyKSvKINxXay/OwEekpthF4gZ3vzm0ujQwef/axUDG.om",
-      "id": 5
-    },
-    {
-      "email": "alexcopadooo@gmail.com",
-      "password": "$2a$10$eUlBZCSguttWOyB1tlx9Vu8Hi4dGqSez1GNWrD7hc5wQ5BJt/THO2",
-      "id": 6
-    },
-    {
-      "email": "migueloncopado@gmail.com",
-      "password": "$2a$10$JfgkTGrPknU712BKOSzKH.Pk3uidYoFswjaEvJBoslsixalzHPugC",
-      "id": 7
-    },
-    {
-      "email": "marcosarjona@gmail.com",
-      "password": "$2a$10$YPU30MndKUVkEC6I1bD3seVM4qxlHAehrhZJRL1O8pMjJrnr9oaLa",
-      "id": 8
     }
   ],
   "genres": [
@@ -140,7 +105,8 @@
       "vote_count": 20996,
       "platform": [
         4
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -163,7 +129,8 @@
       "platform": [
         1,
         2
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -186,7 +153,8 @@
       "vote_count": 16127,
       "platform": [
         3
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -208,7 +176,8 @@
       "platform": [
         5,
         2
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -232,7 +201,8 @@
       "platform": [
         1,
         2
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -256,7 +226,8 @@
       "platform": [
         6,
         2
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -281,7 +252,8 @@
       "platform": [
         8,
         2
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -305,7 +277,8 @@
       "platform": [
         7,
         2
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -329,7 +302,8 @@
       "platform": [
         3,
         4
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -352,7 +326,8 @@
       "platform": [
         1,
         2
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -376,7 +351,8 @@
       "platform": [
         1,
         2
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -397,7 +373,8 @@
       "video": false,
       "vote_average": 8.484,
       "vote_count": 24625,
-      "platform": 2
+      "platform": 2,
+      "userId": 1
     },
     {
       "adult": false,
@@ -418,7 +395,8 @@
       "video": false,
       "vote_average": 8.469,
       "vote_count": 27812,
-      "platform": 2
+      "platform": 2,
+      "userId": 1
     },
     {
       "adult": false,
@@ -437,7 +415,8 @@
       "video": false,
       "vote_average": 8.461,
       "vote_count": 8793,
-      "platform": 2
+      "platform": 2,
+      "userId": 1
     },
     {
       "adult": false,
@@ -457,7 +436,8 @@
       "video": false,
       "vote_average": 8.457,
       "vote_count": 13092,
-      "platform": 8
+      "platform": 8,
+      "userId": 1
     },
     {
       "adult": false,
@@ -480,7 +460,8 @@
       "platform": [
         1,
         2
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -504,7 +485,8 @@
       "platform": [
         5,
         2
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -527,7 +509,8 @@
       "platform": [
         1,
         7
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -550,7 +533,8 @@
       "platform": [
         1,
         7
-      ]
+      ],
+      "userId": 1
     },
     {
       "adult": false,
@@ -574,25 +558,8 @@
       "platform": [
         1,
         9
-      ]
-    },
-    {
-      "adult": false,
-      "backdrop_path": "/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
-      "genre_ids": [
-        18
       ],
-      "id": 22,
-      "original_language": "en",
-      "original_title": "Fight Club",
-      "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground  forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
-      "popularity": 146.609,
-      "poster_path": "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
-      "release_date": "1999-10-15",
-      "title": "Fight Club",
-      "video": false,
-      "vote_average": 8.438,
-      "vote_count": 29840
+      "userId": 1
     }
   ],
   "platforms": [
