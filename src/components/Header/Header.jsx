@@ -10,7 +10,6 @@ import { deepPurple } from "@mui/material/colors";
 const Header = () => {
     const navigate = useNavigate(); 
     const { logout } = useContext(AuthContext);
-    const { downloadMovies } = useContext(MoviesContext);
 
     /**
      * If token != null ; this want to say that
@@ -31,7 +30,7 @@ const Header = () => {
 
                     {token && (
                         <li>
-                            <Link to="/movies" onClick={downloadMovies}>
+                            <Link to="/movies" >
                                 Movies
                             </Link>
                         </li>

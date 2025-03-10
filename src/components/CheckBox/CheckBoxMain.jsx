@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import CategoryCheckBox from "./CategoryCheckBox/CategoryCheckBox";
 import PlatformCheckBox from "./PlatformCheckBox/PlatformCheckBox";
 import "./CheckBoxMain.css";
+import { MoviesContext } from "../../context/MoviesContext";
+import Grid from '@mui/material/Grid';
+import DeleteIcon from '@mui/icons-material/Delete';
+
+
 
 const CheckBoxMain = ({ searchByGenre, searchByPlatForm }) => {
+    const {downloadMovies} = useContext(MoviesContext)
+
     const [filters, setFilters] = useState({
         category: false,
         platform: false,
@@ -20,6 +27,13 @@ const CheckBoxMain = ({ searchByGenre, searchByPlatForm }) => {
             </button>
             <button onClick={() => toggleFilter("platform")} className="checkbox-button">
                 {filters.platform ? "Hide Platform" : "Filter Platform"}
+            </button>
+            <button onClick={downloadMovies} className="checkbox-button">
+            <Grid item xs={3534}>
+                <DeleteIcon />
+                
+        
+            </Grid>
             </button>
 
             <div className="filters-container">

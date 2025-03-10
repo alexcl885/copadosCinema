@@ -55,9 +55,10 @@ const MoviesProvider = ({ children }) => {
      * This function show the list of movies that
      * there are in my own API
     */
-    const downloadMovies = async () => {
+    const downloadMovies = async (navigate) => {
         const apiMovies = await api.get('/movies');
-        setMovies(apiMovies.data);
+            setMovies(apiMovies.data);
+        
     };
 
 
