@@ -55,11 +55,21 @@ const MoviesProvider = ({ children }) => {
      * This function show the list of movies that
      * there are in my own API
     */
-    const downloadMovies = async (navigate) => {
-        const apiMovies = await api.get('/movies');
-            setMovies(apiMovies.data);
-        
+    const downloadMovies = async () => {
+        try {
+            const response = await api.get('/movies');
+            if (response.status === 200) {
+                setMovies(response.data);
+                return true;
+            } else {
+                return false;
+            }
+        } catch (error) {
+            console.error("Error fetching movies:", error);
+            return false; 
+        }
     };
+    
 
 
     /**
