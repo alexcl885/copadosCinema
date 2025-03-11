@@ -10,6 +10,7 @@ import LoginPage from "./pages/LoginPage";
 import './App.css';
 import AboutPage from "./pages/AboutPage";
 import ProfilePage from "./pages/ProfilePage";
+import AddMoviePage from "./pages/AddMoviePage";
 
 /**
  * ALL MY ROUTES IN MY APPLICATION
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path: "movies",
                 element: <ListMoviesPage></ListMoviesPage>
+            },
+            {
+                path: "movies/add",
+                element: <AddMoviePage></AddMoviePage>
             },
             {
                 path: "logout",

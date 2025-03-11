@@ -33,7 +33,11 @@ const Header = () => {
                             <Link to="/movies" >
                                 Movies
                             </Link>
+                            <Link to="/movies/add" >
+                                Add Movie
+                            </Link>
                         </li>
+                        
                     )}
 
                     <li><Link to="/about">About</Link></li>

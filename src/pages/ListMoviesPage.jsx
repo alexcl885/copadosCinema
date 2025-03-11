@@ -18,7 +18,7 @@ const ListMoviesPage = () => {
             }
         };
         fetchMovies();
-    }, [navigate, downloadMovies]);
+    }, []);
 
     return ( 
         <>  
