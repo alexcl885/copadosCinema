@@ -8,7 +8,7 @@ const AddMoviePage = () => {
     const { movies, deleteMovie, searchByPlatForm, searchByGenre, downloadMovies, searchOneMovie, setSearchTerm } = useContext(MoviesContext);
 
     /**
-     * This code is becouse if user is not logged 
+     * This code is because if user is not logged 
      * the page navigate to login.
      */
     useEffect(() => {
